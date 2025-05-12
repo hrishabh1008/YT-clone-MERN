@@ -4,14 +4,13 @@ import { userRouter } from './routes/user.routes.mjs';
 
 
 
-const PORT = 5000
+const PORT = 9999;
 const app = express(); //creating express instance
 
 app.listen(PORT, () => {
   //starting server at port 5000
-  console.log(
-    `***Server Connected @ PORT:5000 => http://localhost:${PORT} ***`
-  );
+
+  console.log(`***Server Connected => http://localhost:${PORT} ***`);
 });
 
 app.use(json());

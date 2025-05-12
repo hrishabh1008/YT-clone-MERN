@@ -1,4 +1,4 @@
-import { getUserVefication } from "../utils/Tgenerator.mjs";
+import { getUserVerification } from "../utils/Tgenerator.mjs";
 
 //authentication of the JWT token from the header
 export async function authenticate(req, res, next) {
@@ -13,7 +13,7 @@ export async function authenticate(req, res, next) {
   const receivedToken = authorization.split(" ")[1];
 
   try {
-    const decryptedToken = getUserVefication(receivedToken);
+    const decryptedToken = getUserVerification(receivedToken);
     // Verify and decode the received token using utility function
     // Attach decoded token info to the request for use in further middleware or route handlers
     req.user = decryptedToken;

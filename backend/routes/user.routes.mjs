@@ -4,7 +4,7 @@ import { addUser, loginUser } from "../controller/user.controller.mjs";
 import {
   decryptUserPassword,
   encryptUserPassword,
-} from "../middleware/crypt.middleware.mjs";
+} from "../middlewares/crypt.middleware.mjs";
 
 // Define user-related routes
 export function userRouter(app) {

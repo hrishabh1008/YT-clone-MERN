@@ -4,7 +4,7 @@ dotenv.config(); // Load environment variables from .env file
 import jwt from "jsonwebtoken"; // Import jsonwebtoken for JWT operations
 
 // eslint-disable-next-line no-undef
-const key = process.env.ENCRIPTION_KEY; // Get the encryption key from environment variables
+const key = process.env.ENCRYPTION_KEY; // Get the encryption key from environment variables
 
 // Function to generate a JWT for a user
 export function setUserAuthentication(user) {
@@ -12,7 +12,7 @@ export function setUserAuthentication(user) {
 }
 
 // Function to verify and decode a JWT
-export function getUserVefication(token) {
+export function getUserVerification(token) {
   try {
     // Verifying and decoding the token using the secret key
     const decoded = jwt.verify(token, key);
